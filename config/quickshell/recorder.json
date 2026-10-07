@@ -1,0 +1,18 @@
+{
+    "audio": [
+        "alsa_output.usb-Logitech_G_series_G435_Wireless_Gaming_Headset_202105190004-00.analog-stereo.monitor",
+        "alsa_input.usb-Logitech_G_series_G435_Wireless_Gaming_Headset_202105190004-00.mono-fallback"
+    ],
+    "bitrate": 40000,
+    "codec": "auto",
+    "container": "mp4",
+    "cursor": true,
+    "folder": "/home/wxw/Videos",
+    "fps": 60,
+    "notifications": true,
+    "quality": "cbr",
+    "replayOnStartup": true,
+    "replaySeconds": 60,
+    "replayStorage": "ram",
+    "source": ""
+}

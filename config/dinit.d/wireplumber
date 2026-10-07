@@ -1,0 +1,4 @@
+type = process
+command = /usr/bin/wireplumber
+depends-on = pipewire
+restart = true

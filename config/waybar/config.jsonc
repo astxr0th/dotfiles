@@ -1,0 +1,94 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 0,
+    "margin": "10 10 0 10",
+    "reload_style_on_change": true,
+    
+    "modules-left": ["mango/workspaces","custom/separator3","mango/layout"],
+    "modules-center": ["mango/window"],
+    "modules-right": ["tray", "custom/separator1","group/hardware", "custom/separator2", "clock"],
+    
+    "dwl/tags": {
+      "num-tags": 9,
+      "tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      "expand": true
+    },
+
+    "mango/window": {
+        "format": "{}",
+        "icon": false,
+    },
+
+    "mango/workspaces": {
+        "format": "{icon}",
+        "hide-empty": true,
+        "on-click": "activate",
+        "on-click-right": "toggle",
+        "overview-label": "OVERVIEW"
+    },
+
+    "mango/layout": {
+        "format": "{}",
+        "format-S":  "Scroller",
+        "format-T":  "Tile",
+        "format-G":  "Grid",
+        "format-F":  "Fair",
+        "format-VF": "Vertical Fair",
+        "format-CT": "Center Tile",
+        "format-RT": "Right Tile",
+        "format-VS": "Vertical Scroller",
+        "format-VT": "Vertical Tile",
+        "format-VG": "Vertical Grid",
+        "format-VK": "Vertical Deck",
+        "format-DW": "Dwindle",
+        "format-M":  "Monocle",
+        "format-K":  "Deck"
+    },
+  
+    "custom/separator1": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "custom/separator2": {
+        "format": "|",
+        "tooltip": false
+    },
+  
+    "custom/separator3": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "interval": 1,
+        "tooltip": false
+    },
+    "group/hardware": {
+      "orientation": "horizontal",
+      "modules": ["memory", "cpu"],
+      "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false
+      }
+    },
+    "cpu": {
+      "format": " {usage}%",
+      "tooltip": true,
+      "on-click-right": "foot -e btop"
+    },
+    "memory": {
+      "format": " {}%",
+      "on-click-right": "foot -e btop"
+    },
+
+    "tray": {
+      "spacing": 4
+    }
+
+
+
+}

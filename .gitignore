@@ -1,0 +1,10 @@
+# generated at runtime by quickshell / pywal
+config/mango/colors.conf
+config/kitty/zenities-colors.conf
+
+# editor and backup junk
+*.bak
+*.bak-*
+*~
+*.swp
+.DS_Store
