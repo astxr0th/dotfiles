@@ -77,7 +77,7 @@ ShellRoot {
         }
     }
 
-    // `qs ipc call widgets toggle` — zenities' SUPER+H, now opens the center
+    // `qs ipc call widgets toggle` — SUPER+SHIFT+Space, opens the center
     IpcHandler {
         target: "widgets"
 

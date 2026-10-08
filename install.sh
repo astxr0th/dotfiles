@@ -22,6 +22,7 @@ ASSUME_YES=0
 COPY=0
 PACKAGES=1
 EXTRAS=0
+PKG_FAILED=0
 
 # --------------------------------------------------------------------------
 #  packages
@@ -159,9 +160,14 @@ install_packages() {
     fi
 
     info "${#pkgs[@]} packages: ${pkgs[*]}"
-    $SUDO pacman -Sy --needed --noconfirm archlinux-keyring 2>/dev/null || true
-    "$AUR" -S --needed "${pkgs[@]}"
-    ok "packages installed"
+    # a failed package shouldn't stop the configs from being linked
+    if "$AUR" -Syu --needed "${pkgs[@]}"; then
+        ok "packages installed"
+    else
+        PKG_FAILED=1
+        warn "some packages failed to install, linking the configs anyway"
+        warn "install the missing ones by hand, or fix the errors above and re-run"
+    fi
 }
 
 link() {
@@ -192,10 +198,12 @@ fix_paths() {
     # a few configs need absolute paths, swap the original home dir for yours
     if [[ $HOME == /home/wxw ]]; then return; fi
     step "fixing hardcoded paths for $HOME"
-    grep -rlF /home/wxw "$DOTFILES/config" "$DOTFILES/home" 2>/dev/null | while read -r f; do
+    local f
+    # || true: on a re-run nothing matches anymore, and grep's exit 1 would kill the script
+    while read -r f; do
         sed -i "s|/home/wxw|$HOME|g" "$f"
         ok "${f#"$DOTFILES"/}"
-    done
+    done < <(grep -rlF /home/wxw "$DOTFILES/config" "$DOTFILES/home" 2>/dev/null || true)
 }
 
 link_configs() {
@@ -236,6 +244,7 @@ enable_services() {
 finish() {
     step "done"
     if [[ -d $BACKUP ]]; then info "your old configs are in ${BACKUP/#$HOME/\~}"; fi
+    if ((PKG_FAILED)); then warn "some packages didn't install, see the errors above"; fi
     cat <<EOF
 
   ${B}next steps${R}

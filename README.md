@@ -108,7 +108,7 @@ extras   zen-browser-bin equibop-bin steam
 | <kbd>SUPER</kbd> <kbd>E</kbd> | yazi |
 | <kbd>SUPER</kbd> <kbd>B</kbd> | zen browser |
 | <kbd>SUPER</kbd> <kbd>W</kbd> | wallpaper picker |
-| <kbd>SUPER</kbd> <kbd>H</kbd> | control center |
+| <kbd>SUPER</kbd> <kbd>SHIFT</kbd> <kbd>Space</kbd> | control center |
 | <kbd>SUPER</kbd> <kbd>SHIFT</kbd> <kbd>S</kbd> | screenshot tool |
 | <kbd>SUPER</kbd> <kbd>SHIFT</kbd> <kbd>C</kbd> | edit mango config |
 | <kbd>SUPER</kbd> <kbd>R</kbd> | reload mango |
@@ -170,7 +170,8 @@ extras   zen-browser-bin equibop-bin steam
 | <kbd>SUPER</kbd> + scroll | cycle tags |
 | <kbd>ALT</kbd> <kbd>SHIFT</kbd> <kbd>←</kbd> / <kbd>→</kbd> | focus monitor |
 | <kbd>SUPER</kbd> <kbd>ALT</kbd> <kbd>←</kbd> / <kbd>→</kbd> | send window to monitor |
-| <kbd>ALT</kbd> <kbd>SHIFT</kbd> <kbd>X</kbd> / <kbd>Z</kbd> / <kbd>R</kbd> | gaps bigger / smaller / toggle |
+| <kbd>SUPER</kbd> <kbd>=</kbd> / <kbd>-</kbd> | gaps bigger / smaller |
+| <kbd>SUPER</kbd> <kbd>SHIFT</kbd> <kbd>G</kbd> | toggle gaps |
 
 </details>
 
@@ -188,6 +189,8 @@ extras   zen-browser-bin equibop-bin steam
 | <kbd>ALT</kbd> <kbd>1-9</kbd> | go to buffer |
 | <kbd>leader</kbd> <kbd>w</kbd> | close buffer |
 | <kbd>ALT</kbd> <kbd>T</kbd> | floating terminal |
+| <kbd>ALT</kbd> <kbd>E</kbd> | file explorer |
+| <kbd>CTRL</kbd> <kbd>C</kbd> | toggle completion |
 
 </details>
 

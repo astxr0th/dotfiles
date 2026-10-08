@@ -6,7 +6,7 @@ import qs.components
 import qs.widgets
 
 // zenities' right-hand widget stack (device control, resources, music) plus a
-// notifications section. Opened by clicking the sidebar clock or SUPER+H.
+// notifications section. Opened by clicking the sidebar clock or SUPER+SHIFT+Space.
 Overlay {
     id: root
 
