@@ -4,7 +4,6 @@
 
 **wxw @ nuclearcore** · mango + quickshell rice for Arch
 
-[![Arch](https://img.shields.io/badge/Arch-1793D1?style=for-the-badge&logo=archlinux&logoColor=white)](https://archlinux.org)
 [![Artix](https://img.shields.io/badge/Artix-10A0CC?style=for-the-badge&logo=artixlinux&logoColor=white)](https://artixlinux.org)
 [![Wayland](https://img.shields.io/badge/Wayland-FFBC00?style=for-the-badge&logo=wayland&logoColor=black)](https://wayland.freedesktop.org)
 [![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white)](https://neovim.io)
